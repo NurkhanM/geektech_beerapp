@@ -1,11 +1,10 @@
 package com.geektech.beerapp.presentation.main;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.geektech.beerapp.BeerApp;
-import com.geektech.beerapp.R;
 import com.geektech.beerapp.data.beers.IBeerDataSource;
 import com.geektech.beerapp.model.BeerEntity;
 import com.geektech.beerapp.presentation.beers.BeersFragment;
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         BeersFragment fragment = new BeersFragment();
 

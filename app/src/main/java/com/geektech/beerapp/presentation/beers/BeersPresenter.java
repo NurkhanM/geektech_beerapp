@@ -3,7 +3,6 @@ package com.geektech.beerapp.presentation.beers;
 import com.geektech.beerapp.data.beers.IBeerDataSource;
 import com.geektech.beerapp.model.BeerEntity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BeersPresenter implements IBeersContract.Presenter {
@@ -12,7 +11,7 @@ public class BeersPresenter implements IBeersContract.Presenter {
     IBeerDataSource beerDataSource;
 
     public BeersPresenter(IBeerDataSource beerDataSource) {
-
+        this.beerDataSource = beerDataSource;
     }
 
     @Override

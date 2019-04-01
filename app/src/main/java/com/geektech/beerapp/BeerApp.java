@@ -6,6 +6,7 @@ import android.util.Log;
 import com.geektech.beerapp.data.beers.BeerRepository;
 import com.geektech.beerapp.data.beers.IBeerDataSource;
 import com.geektech.beerapp.data.beers.local.BeerLocalDataSource;
+import com.geektech.beerapp.data.beers.remote.BeerRemoteDataSource;
 
 public class BeerApp extends Application {
 
@@ -17,7 +18,7 @@ public class BeerApp extends Application {
 
         beerRepository = new BeerRepository(
                 new BeerLocalDataSource(),
-                null
+                new BeerRemoteDataSource()
         );
 
         Log.d("ololo", "On application create");

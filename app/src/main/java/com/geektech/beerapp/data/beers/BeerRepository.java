@@ -4,9 +4,6 @@ import com.geektech.beerapp.data.beers.local.IBeerLocalDataSource;
 import com.geektech.beerapp.data.beers.remote.IBeerRemoteDataSource;
 import com.geektech.beerapp.model.BeerEntity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BeerRepository implements IBeerDataSource {
 
     private IBeerLocalDataSource mLocal;
@@ -21,10 +18,7 @@ public class BeerRepository implements IBeerDataSource {
 
     @Override
     public void getBeers(BeersCallback callback) {
-        ArrayList<BeerEntity> beers = new ArrayList<>();
-        beers.add(new BeerEntity());
-
-        callback.onSuccess(beers);
+       mRemote.getBeers(callback);
     }
 
     //1 - Activity make request data from repository via getBeers(callback)
